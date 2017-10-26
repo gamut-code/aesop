@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const fs = require('fs');
 const { argv } = process;
+const compile = require('../compile');
 
 const componentName = argv.slice(2)[0];
 
@@ -15,5 +16,7 @@ if (!fs.existsSync(`tmp/dr-seuss/${componentName}`)) {
   console.log('Component already exists, continue on...');
 }
 
-console.log('All set!');
+const filePath = `tmp/dr-seuss/${componentName}`
+compile(componentName, filePath);
 
+console.log('All set!');

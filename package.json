@@ -15,5 +15,8 @@
   "devDependencies": {
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
+  },
+  "dependencies": {
+    "fs-extra": "^4.0.2"
   }
 }
